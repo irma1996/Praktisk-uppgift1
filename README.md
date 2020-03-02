@@ -8,3 +8,4 @@ Sedan är det bara att köra `npm start` och börja koda 😊.
 
 Ni är fria att använda det skelett av kod jag satt upp till er (dock behöver ni sätta upp props och handlers själva), eller om det är enklare så bara radera den befintliga koden och bygg upp det med er egna kod.
 # Praktisk-uppgift1
+# tenta1
