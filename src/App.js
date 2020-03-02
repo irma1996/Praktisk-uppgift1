@@ -9,40 +9,41 @@ class App extends React.Component {
 	name: "",
 	myData: null
 	};
-	onChange = e => {
-	this.setState({
-	name: e.target.value
-	});
-	};
+
+		onChange = e => {
+	  	 this.setState({
+		name: e.target.value
+		});
+		};
 
 	handleApi = e => {
-	e.preventDefault();
-	fetch(
-	`http://api.openweathermap.org/data/2.5/weather?q=${this.state.name}&units=metric&appid=a9f6719e37f20890ebff5d91724dec1f`
-	)
-	.then(response => response.json())
-	.then(data => {
-	this.setState({
-	myData: data,
-	report: true
-	});
-	console.log(data);
-	});
-	};
+		e.preventDefault();
+		fetch(
+		`http://api.openweathermap.org/data/2.5/weather?q=${this.state.name}&units=metric&appid=a9f6719e37f20890ebff5d91724dec1f`
+		)
+		.then(response => response.json())
+		.then(data => {
+		this.setState({
+		myData: data,
+		report: true
+		});
+		console.log(data);
+		});
+		};
 
 	render() {
 	return (
 	<div id="app">
-	<div className="container my-5">
-	<h1 className="text-center mb-5">
-	<span role="img" aria-label="Weather?">
-	🌦❔
-	</span>
-	</h1>
+		<div className="container my-5">
+			<h1 className="text-center mb-5">
+				<span role="img" aria-label="Weather?">
+			🌦❔
+			</span>
+		</h1>
 
 	<SearchCity
-	onChange={this.onChange}
-	handleApi={this.handleApi}
+		onChange={this.onChange}
+		handleApi={this.handleApi}
 	/>
 
 	{this.state.report ? (
