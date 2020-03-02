@@ -1,0 +1,33 @@
+import React from 'react';
+
+class SearchCity extends React.Component {
+
+	render() {
+	return (
+
+	<div id="SearchCity" className="mb-5">
+	<form onSubmit={e => this.props.handleApi(e)}>
+
+	<div className="input-group">
+	<input
+	type="text"
+	className="form-control form-control-lg"
+	id="city"
+	onChange={e => this.props.onChange(e)}
+	/>
+
+	<div className="input-group-append">
+
+	<button className="btn btn-success btn-lg">
+	Search
+	</button>
+	</div>
+	</div>
+	</form>
+	</div>
+	);
+	}
+   }
+
+
+export default SearchCity;
